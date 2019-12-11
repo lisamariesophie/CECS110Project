@@ -1,0 +1,419 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #253d56;
+}
+
+body .hero {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("header.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.btn-primary {
+  background-color: #253d56 !important;
+  border: none;
+  padding: 8px 20px;
+}
+
+.btn-primary:hover {
+  background-color: #355579 !important;
+  padding: 8px 20px;
+}
+
+.hero:before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  height: 150vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  /* font-family: 'Nothing You Could Do', cursive; */
+  font-family: "Merienda", cursive;
+  color: white;
+  text-align: center;
+  font-size: 6rem;
+  line-height: 4rem;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  max-width: 50rem;
+  margin: 45vh auto 0;
+  -webkit-transition: 1s opacity ease-in-out;
+}
+
+.content {
+  position: absolute;
+  z-index: 1000;
+  top: 100vh;
+  background: #fff;
+  height: 170vh;
+  width: 100vw;
+  box-shadow: 0 -2px 1px rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.wrapper {
+  width: 75%;
+  margin: 0 auto;
+}
+
+#carousel {
+  max-width: 600px;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.navbar {
+  border-bottom: 1px solid #ccc;
+  opacity: 0.9;
+}
+
+nav li a {
+  font-size: 20px;
+  margin: 0 20px;
+}
+
+nav #logo {
+  height: 70px;
+}
+
+section {
+  padding: 100px 50px;
+  text-align: center;
+}
+
+.left {
+  float: left;
+}
+
+#homeText,
+#cakes {
+  background: url(marble.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#homeText {
+  font-size: 20px;
+}
+
+#summary,
+#about,
+#youtube {
+  color: #fff;
+  background: #253d56;
+}
+
+#cupcakes,
+#about,
+#weddingcakes,
+#gallery {
+  margin-top: 80px;
+}
+
+
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+  background-color: #c67605;
+}
+#lblCartCount {
+  font-size: 12px;
+  background: #253d56;
+  color: #fff;
+  padding: 0 5px;
+  vertical-align: top;
+  margin-left: -10px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Merienda", cursive;
+  /* font-family: "Rock Salt", cursive; */
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+h4 {
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+}
+
+#cards {
+  padding: 150px 80px;
+}
+
+.card {
+  margin: 20px 20px;
+}
+
+#cards a {
+  text-decoration: none;
+  color: #253d56;
+  font-family: "Merienda", cursive;
+}
+
+.card-image {
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#cupcake {
+  background-image: url(cupcake1.jpg);
+}
+
+#cake {
+  background-image: url(weddingcake.jpg);
+}
+#macarons {
+  background-image: url(macarons.jpg);
+}
+
+#cookies {
+  background-image: url(cookies.jpg);
+}
+
+/* products page */
+.product-row img {
+  width: 100%;
+}
+
+.overlay {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 10%;
+  margin-left: 0;
+  width: 70px;
+}
+
+.product-top {
+  padding-top: 20px;
+}
+
+.product-top:hover .overlay {
+  opacity: 1;
+  margin-left: 8%;
+  transition: 0.5s;
+}
+
+/* cart */
+#cart img {
+  min-width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+footer {
+  background: #43484d;
+  height: 100px;
+  color: #fff;
+}
+footer li {
+  font-size: 30px;
+}
+
+#contact form {
+  text-align: left;
+  padding: 75px;
+  border: 2px solid #253d56;
+  border-radius: 5px;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 30%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 700px;
+  max-height: 450px;
+  height: 100%;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  display: inline-block;
+  height: 70px;
+  background-color: #999 !important;
+}
+footer .copyright {
+  width: 50%;
+  float: left;
+}
+@media (max-width: 600px) {
+  footer .copyright {
+    width: 100%;
+  }
+}
+footer .copyright p {
+  padding-left: 10%;
+  color: white;
+  font-size: 0.7em;
+  line-height: 70px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+@media (max-width: 600px) {
+  footer .copyright p {
+    text-align: center;
+    padding: 0;
+  }
+}
+footer .social {
+  width: 50%;
+  float: right;
+}
+@media (max-width: 600px) {
+  footer .social {
+    width: 100%;
+  }
+}
+footer .social a {
+  float: left;
+  line-height: 70px;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s;
+}
+footer .social a:hover {
+  background-color: #222;
+  -moz-transition: all, 0.3s;
+  -o-transition: all, 0.3s;
+  -webkit-transition: all, 0.3s;
+  transition: all, 0.3s;
+}
+
+.insta {
+  background-color: #f63c8a;
+  font-size: 1.2em;
+  width: 20%;
+}
+
+.face {
+  background-color: #3d5b94;
+  font-size: 1.2em;
+  width: 20%;
+}
+
+.tweet {
+  background-color: #3dacdd;
+  font-size: 1.2em;
+  width: 20%;
+}
+
+.support {
+  background-color: #355579;
+  font-size: 0.8em;
+  width: 40%;
+}
+
+.sum {
+  color: #253d56;
+}
+
+/* On smaller screens, decrease text size */
+@media (max-width: 767px) {
+  .wrapper {
+    width: 100%;
+  }
+  .videoWrapper {
+    padding-bottom: 56%;
+  }
+}
+@media (min-width: 768px) {
+  .wrapper {
+    width: 95%;
+  }
+  .videoWrapper {
+    padding-bottom: 50%;
+  }
+}
+@media (min-width: 992px) {
+  .wrapper {
+    width: 90%;
+  }
+  .videoWrapper {
+    padding-bottom: 45%;
+  }
+}
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 85%;
+  }
+  .videoWrapper {
+    padding-bottom: 30%;
+  }
+}
