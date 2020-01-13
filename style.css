@@ -197,10 +197,6 @@ p {
   font-size: 18px;
 }
 
-#cards {
-  padding: 150px 80px;
-}
-
 .card {
   margin: 20px 20px;
 }
@@ -280,23 +276,6 @@ footer li {
   border-radius: 5px;
 }
 
-.videoWrapper {
-  position: relative;
-  padding-bottom: 30%; /* 16:9 */
-  padding-top: 25px;
-  height: 0;
-}
-.videoWrapper iframe {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  max-width: 700px;
-  max-height: 450px;
-  height: 100%;
-}
-
 /* footer */
 footer {
   width: 100%;
@@ -334,6 +313,10 @@ footer .social {
 @media (max-width: 600px) {
   footer .social {
     width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 64px;
   }
 }
 footer .social a {
@@ -384,36 +367,41 @@ footer .social a:hover {
   color: #253d56;
 }
 
+
 /* On smaller screens, decrease text size */
+@media (max-width: 576px) {
+
+  .hero h1 {
+    font-size: 56px;
+  }
+  .wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  section {
+    padding: 100px 20px;
+    text-align: center;
+  }
+}
+
 @media (max-width: 767px) {
   .wrapper {
     width: 100%;
-  }
-  .videoWrapper {
-    padding-bottom: 56%;
   }
 }
 @media (min-width: 768px) {
   .wrapper {
     width: 95%;
   }
-  .videoWrapper {
-    padding-bottom: 50%;
-  }
 }
 @media (min-width: 992px) {
   .wrapper {
     width: 90%;
   }
-  .videoWrapper {
-    padding-bottom: 45%;
-  }
 }
 @media (min-width: 1200px) {
   .wrapper {
     width: 85%;
-  }
-  .videoWrapper {
-    padding-bottom: 30%;
   }
 }
