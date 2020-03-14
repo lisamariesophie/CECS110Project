@@ -16,7 +16,6 @@ if ((!localStorage.getItem('cart'))) {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-
 let allButtons = document.getElementsByClassName("addBtn");
 for (let i = 0; i < allButtons.length; i++) {
     allButtons[i].addEventListener('click', function (e) {
