@@ -23,7 +23,7 @@ for (let i = 0; i < allButtons.length; i++) {
         let product = {};
         product.name = data.name;
         product.price = data.price;
-        product.quantity = 1;
+        product.quantity = 0;
         product.img = e.target.parentNode.parentNode.parentNode.childNodes[1].src;
         addToCart(product);
     });
@@ -32,11 +32,23 @@ for (let i = 0; i < allButtons.length; i++) {
 
 function addToCart(product) {
     // Retrieve the cart object from local storage
+    let found = 0;
     if (localStorage && localStorage.getItem('cart')) {
+        console.log("Cart found");
         var cart = JSON.parse(localStorage.getItem('cart'));
-        cart.products.push(product);
+        for (let cartProduct of cart.products) {
+            console.log(cartProduct.name);
+            if (product.name === cartProduct.name) {
+                cartProduct.quantity += 1;
+                found = 1;
+            }
+        }
+        if (found === 0) {
+            product.quantity += 1;
+            cart.products.push(product);
+            ++n;
+        }
         localStorage.setItem('cart', JSON.stringify(cart));
-        ++n;
         updateCounter();
     }
 }

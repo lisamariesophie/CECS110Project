@@ -17,12 +17,12 @@ function getCart() {
     let i = 0;
     let tax = 0;
     let subtotal = 0;
-    let shipping = 10;
+    let shipping = 5.95;
     let total = 0;
     const table = document.getElementById('table');
     table.innerHTML = "";
     products.forEach(product => {
-        subtotal += parseInt(product.price);
+        subtotal += parseInt(product.price * product.quantity);
         table.innerHTML +=
             `<tr>
         <td class="border-0 align-middle">
@@ -44,10 +44,11 @@ function getCart() {
     sum.innerHTML = `<li class="d-flex justify-content-between py-3 border-bottom"><strong
     >Order
     Subtotal </strong><strong>${'$' + subtotal}</strong></li>
+    <li class="d-flex justify-content-between py-3 border-bottom"><strong
+    >Tax</strong><strong>${'$' + tax}</strong></li>
 <li class="d-flex justify-content-between py-3 border-bottom"><strong
    >Shipping and handling</strong><strong>${'$' + shipping}</strong></li>
-<li class="d-flex justify-content-between py-3 border-bottom"><strong
-    >Tax</strong><strong>${'$' + tax}</strong></li>
+
 <li class="d-flex justify-content-between py-3 border-bottom"><strong
     >Total</strong>
 <h5 class="font-weight-bold">${'$' + total}</h5>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Bellota+Text&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Bellota+Text&display=swap");
 
 * {
   margin: 0;
@@ -8,10 +8,11 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  color: #253d56;
+  color: #293462;
+  font-size: 18px;
 }
 
-body .hero {
+header {
   position: fixed;
   z-index: 1;
   top: 0;
@@ -25,14 +26,14 @@ body .hero {
 }
 
 .btn-primary {
-  background-color: #253d56 !important;
+  background-color: #f7be16 !important;
   border: none;
-  padding: 8px 20px;
+  padding: 8px 18px;
 }
 
 .btn-primary:hover {
-  background-color: #355579 !important;
-  padding: 8px 20px;
+  background-color: #fe346e !important;
+  padding: 8px 18px;
 }
 
 .hero:before {
@@ -45,10 +46,10 @@ body .hero {
   position: absolute;
 }
 
-.hero h1 {
+header h1 {
   position: relative;
   z-index: 1;
-  font-family: 'Bellota Text', cursive;
+  font-family: "Bellota Text", cursive;
   color: white;
   text-align: center;
   font-size: 6rem;
@@ -96,8 +97,7 @@ body .hero {
 }
 
 .navbar {
-  border-bottom: 1px solid #ccc;
-  opacity: 0.9;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.9);
 }
 
 nav li a {
@@ -106,7 +106,7 @@ nav li a {
 }
 
 nav #logo {
-  height: 70px;
+  height: 56px;
 }
 
 section {
@@ -118,32 +118,50 @@ section {
   float: left;
 }
 
-#homeText,
-#cakes {
-  background: url(marble.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+#cakes,
+#summary {
+  background: #293462;
+  color: #fff;
 }
 
 #homeText {
   font-size: 20px;
 }
 
-#summary,
 #about,
-#youtube {
+#cards,
+#about {
   color: #fff;
-  background: #253d56;
+  background: #293462;
+}
+
+#about, #cupcakes {
+  margin-top: 60px;
 }
 
 #cupcakes,
-#about,
-#weddingcakes,
-#gallery {
-  margin-top: 80px;
+#homeText {
+  background: url("https://images.unsplash.com/photo-1582818617487-8a930205f923?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80")
+    no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+  background-attachment: fixed;
 }
 
+#cards,
+#homeText {
+  margin: 0px;
+}
+
+#lblCartCount {
+  font-size: 11px;
+  background: #fe346e;
+  color: #fff;
+  padding: 1px 5px;
+  vertical-align: top;
+  margin-left: -10px;
+}
 
 .badge {
   padding-left: 9px;
@@ -153,23 +171,10 @@ section {
   border-radius: 9px;
 }
 
-.label-warning[href],
-.badge-warning[href] {
-  background-color: #c67605;
-}
-#lblCartCount {
-  font-size: 12px;
-  background: #253d56;
-  color: #fff;
-  padding: 0 5px;
-  vertical-align: top;
-  margin-left: -10px;
-}
-
 h1,
 h2,
 h3 {
-  font-family: 'Bellota Text', cursive;
+  font-family: "Bellota Text", cursive;
 }
 
 h1 {
@@ -197,37 +202,30 @@ p {
   font-size: 18px;
 }
 
+.bg-light {
+  background: #293462 !important;
+  color: #fff !important;
+}
+
 .card {
-  margin: 20px 20px;
+  margin: 20px 0px;
+  padding: 3% 4%;
+  border: none;
+  color: #293462 !important;
+}
+
+.card-title {
+  font-size: 24px;
+}
+
+#cards img {
+  width: 100%;
+  object-fit: cover;
 }
 
 #cards a {
   text-decoration: none;
-  color: #253d56;
-  font-family: 'Bellota Text', cursive;
-}
-
-.card-image {
-  width: 100%;
-  min-height: 200px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-
-#cupcake {
-  background-image: url(cupcake1.jpg);
-}
-
-#cake {
-  background-image: url(weddingcake.jpg);
-}
-#macarons {
-  background-image: url(macarons.jpg);
-}
-
-#cookies {
-  background-image: url(cookies.jpg);
+  font-family: "Bellota Text", cursive;
 }
 
 /* products page */
@@ -261,117 +259,20 @@ p {
   object-fit: cover;
 }
 
-footer {
-  background: #43484d;
-  height: 100px;
-  color: #fff;
-}
-footer li {
-  font-size: 30px;
-}
-
 #contact form {
   text-align: left;
-  padding: 75px;
-  border: 2px solid #253d56;
+  padding: 5%;
+  border: 2px solid #1b2a49;
   border-radius: 5px;
-}
-
-/* footer */
-footer {
-  width: 100%;
-  display: inline-block;
-  height: 70px;
-  background-color: #999 !important;
-}
-footer .copyright {
-  width: 50%;
-  float: left;
-}
-@media (max-width: 600px) {
-  footer .copyright {
-    width: 100%;
-  }
-}
-footer .copyright p {
-  padding-left: 10%;
-  color: white;
-  font-size: 0.7em;
-  line-height: 70px;
-  text-transform: capitalize;
-  letter-spacing: 1px;
-}
-@media (max-width: 600px) {
-  footer .copyright p {
-    text-align: center;
-    padding: 0;
-  }
-}
-footer .social {
-  width: 50%;
-  float: right;
-}
-@media (max-width: 600px) {
-  footer .social {
-    width: 100%;
-  }
-
-  .hero h1 {
-    font-size: 64px;
-  }
-}
-footer .social a {
-  float: left;
-  line-height: 70px;
-  text-decoration: none;
-  color: white;
-  text-align: center;
-  font-weight: bold;
-  -moz-transition: all, 0.3s;
-  -o-transition: all, 0.3s;
-  -webkit-transition: all, 0.3s;
-  transition: all, 0.3s;
-}
-footer .social a:hover {
-  background-color: #222;
-  -moz-transition: all, 0.3s;
-  -o-transition: all, 0.3s;
-  -webkit-transition: all, 0.3s;
-  transition: all, 0.3s;
-}
-
-.insta {
-  background-color: #f63c8a;
-  font-size: 1.2em;
-  width: 20%;
-}
-
-.face {
-  background-color: #3d5b94;
-  font-size: 1.2em;
-  width: 20%;
-}
-
-.tweet {
-  background-color: #3dacdd;
-  font-size: 1.2em;
-  width: 20%;
-}
-
-.support {
-  background-color: #355579;
-  font-size: 0.8em;
-  width: 40%;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .sum {
-  color: #253d56;
+  color: #1b2a49;
 }
 
-
-/* On smaller screens, decrease text size */
 @media (max-width: 576px) {
-
   .hero h1 {
     font-size: 56px;
   }
@@ -379,7 +280,7 @@ footer .social a:hover {
     width: 100%;
     overflow: hidden;
   }
-  
+
   section {
     padding: 100px 20px;
     text-align: center;
@@ -390,19 +291,32 @@ footer .social a:hover {
   .wrapper {
     width: 100%;
   }
+  .card {
+    min-height: 360px;
+  }
 }
 @media (min-width: 768px) {
   .wrapper {
     width: 95%;
+  }
+
+  .card {
+    min-height: 330px;
   }
 }
 @media (min-width: 992px) {
   .wrapper {
     width: 90%;
   }
+  .card {
+    min-height: 330px;
+  }
 }
 @media (min-width: 1200px) {
   .wrapper {
     width: 85%;
+  }
+  .card {
+    min-height: 380px;
   }
 }
