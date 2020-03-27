@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html, body {
+  height:100%;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #293462;
@@ -26,13 +30,13 @@ header {
 }
 
 .btn-primary {
-  background-color: #f7be16 !important;
+  background-color: #fe346e !important;
   border: none;
   padding: 8px 18px;
 }
 
 .btn-primary:hover {
-  background-color: #fe346e !important;
+  background-color: #f7be16 !important;
   padding: 8px 18px;
 }
 
@@ -73,6 +77,7 @@ header h1 {
 
 .wrapper {
   width: 75%;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -109,6 +114,18 @@ nav #logo {
   height: 56px;
 }
 
+.nav-item a {
+  color: #151d3d9f !important;
+}
+
+.nav-item a:hover {
+  color: #151d3d !important;
+}
+
+.active a {
+  color: #151d3d !important;
+}
+
 section {
   padding: 100px 50px;
   text-align: center;
@@ -119,7 +136,9 @@ section {
 }
 
 #cakes,
-#summary {
+#summary,
+#about,
+footer {
   background: #293462;
   color: #fff;
 }
@@ -128,19 +147,12 @@ section {
   font-size: 20px;
 }
 
-#about,
-#cards,
-#about {
-  color: #fff;
-  background: #293462;
-}
-
 #about, #cupcakes {
   margin-top: 60px;
 }
 
 #cupcakes,
-#homeText {
+#cards {
   background: url("https://images.unsplash.com/photo-1582818617487-8a930205f923?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80")
     no-repeat;
   background-position: center center;
@@ -152,6 +164,7 @@ section {
 #cards,
 #homeText {
   margin: 0px;
+  background-attachment: scroll;
 }
 
 #lblCartCount {
@@ -207,25 +220,35 @@ p {
   color: #fff !important;
 }
 
+
+/* Cards */
 .card {
   margin: 20px 0px;
   padding: 3% 4%;
   border: none;
-  color: #293462 !important;
+  color: #293462;
+  font-weight: bold;
+
 }
 
 .card-title {
+  font-weight: bold;
   font-size: 24px;
 }
 
 #cards img {
   width: 100%;
   object-fit: cover;
+  height: 400px;
 }
 
 #cards a {
   text-decoration: none;
   font-family: "Bellota Text", cursive;
+}
+
+#cards .card {
+  height: 500px;
 }
 
 /* products page */
@@ -252,7 +275,15 @@ p {
   transition: 0.5s;
 }
 
-/* cart */
+.toast-header {
+  background-color: #fe346e;
+  color: #fff;
+}
+.toast-body {
+  color: #293462;
+}
+
+/* cart page*/
 #cart img {
   min-width: 100px;
   height: 100px;
@@ -272,6 +303,15 @@ p {
   color: #1b2a49;
 }
 
+footer {
+  background-color: #151d3d;
+  height: 170px;
+  text-align: center;
+  padding: 40px;
+}
+
+
+/* Media Queries */
 @media (max-width: 576px) {
   .hero h1 {
     font-size: 56px;
@@ -285,6 +325,14 @@ p {
     padding: 100px 20px;
     text-align: center;
   }
+
+  #cards img {
+    height: 350px;
+  }
+  
+  #cards .card {
+    height: 450px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -294,6 +342,14 @@ p {
   .card {
     min-height: 360px;
   }
+
+  #cards img {
+    height: 330px;
+  }
+  
+  #cards .card {
+    height: 400px;
+  }
 }
 @media (min-width: 768px) {
   .wrapper {
@@ -301,7 +357,15 @@ p {
   }
 
   .card {
-    min-height: 330px;
+    min-height: 310px;
+  }
+
+  #cards img {
+    height: 330px;
+  }
+  
+  #cards .card {
+    height: 400px;
   }
 }
 @media (min-width: 992px) {
@@ -309,7 +373,15 @@ p {
     width: 90%;
   }
   .card {
-    min-height: 330px;
+    min-height: 310px;
+  }
+
+  #cards img {
+    height: 350px;
+  }
+  
+  #cards .card {
+    height: 420px;
   }
 }
 @media (min-width: 1200px) {
@@ -318,5 +390,13 @@ p {
   }
   .card {
     min-height: 380px;
+  }
+
+  #cards img {
+    height: 330px;
+  }
+  
+  #cards .card {
+    height: 410px;
   }
 }

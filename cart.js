@@ -14,15 +14,14 @@ else {
 }
 
 function getCart() {
-    let i = 0;
-    let tax = 0;
-    let subtotal = 0;
-    let shipping = 5.95;
-    let total = 0;
     const table = document.getElementById('table');
+    const sum = document.getElementById('totalsum');
+    let i = 0, tax = 0, subtotal = 0, shipping = 5.95, total = 0;
     table.innerHTML = "";
     products.forEach(product => {
-        subtotal += parseInt(product.price * product.quantity);
+        subtotal += parseFloat(product.price * product.quantity);
+        tax = parseFloat((subtotal * 0.1025).toFixed(2));
+        total = (subtotal + shipping + tax).toFixed(2);
         table.innerHTML +=
             `<tr>
         <td class="border-0 align-middle">
@@ -38,9 +37,6 @@ function getCart() {
     </tr>`;
         i++;
     });
-    tax = parseFloat((subtotal * 0.1025).toFixed(2));
-    total = subtotal + shipping + tax;
-    const sum = document.getElementById('totalsum');
     sum.innerHTML = `<li class="d-flex justify-content-between py-3 border-bottom"><strong
     >Order
     Subtotal </strong><strong>${'$' + subtotal}</strong></li>
@@ -55,6 +51,7 @@ function getCart() {
 </li>`;
 }
 
+// remove Item from cart
 function deleteItem(index) {
     products.splice(index, 1);
     cart.products = products;
@@ -65,8 +62,14 @@ function deleteItem(index) {
 }
 
 function updateCounter() {
-    localStorage.setItem("counter", n);
-    cartCounter.innerHTML = n;
+    if (n <= 0) {
+        localStorage.setItem("counter", 0);
+        cartCounter.innerHTML = 0;
+    }
+    else {
+        localStorage.setItem("counter", n);
+        cartCounter.innerHTML = n;
+    }
 }
 
 getCart();
