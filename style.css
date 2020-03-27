@@ -305,7 +305,7 @@ p {
 
 footer {
   background-color: #151d3d;
-  height: 170px;
+  height: 190px;
   text-align: center;
   padding: 40px;
 }
@@ -333,6 +333,10 @@ footer {
   #cards .card {
     height: 450px;
   }
+
+  nav #logo {
+    height: 48px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -349,6 +353,10 @@ footer {
   
   #cards .card {
     height: 400px;
+  }
+
+  nav #logo {
+    height: 42px;
   }
 }
 @media (min-width: 768px) {
