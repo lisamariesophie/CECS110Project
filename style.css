@@ -375,6 +375,10 @@ footer {
   #cards .card {
     height: 400px;
   }
+
+  nav #logo {
+    height: 42px;
+  }
 }
 @media (min-width: 992px) {
   .wrapper {
